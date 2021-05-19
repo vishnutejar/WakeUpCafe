@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WakeUpCafe.pages.WelcomePage"
+             NavigationPage.HasNavigationBar="False"
+             IconImageSource="icon.png">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <!--<Label Text="Skip" TextColor="Black" Margin="20" FontSize="20" BackgroundColor="Transparent" HorizontalOptions="End">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SkipTapped"/>
+                </Label.GestureRecognizers>
+            </Label>-->
+          
+           
+            <Image Source="icon.png" Grid.Row="0"/>
+            <StackLayout Orientation="Vertical" Grid.Row="1" HorizontalOptions="CenterAndExpand" >
+                <Label Text="Welcome" HorizontalTextAlignment="Center" FontSize="18" FontAttributes="Bold"/>
+                <Label Text="To then tea sanctuary  relax" FontSize="12" HorizontalTextAlignment="Center"/>
+                <Button Text="Next" Clicked="GoToHomePage" WidthRequest="300" HeightRequest="50" CornerRadius="25" BackgroundColor="Transparent" BorderWidth="2" BorderColor="Black" Margin="0,60,0,0"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="EndAndExpand" Margin="20">
+                <Frame BackgroundColor="Transparent" HorizontalOptions="Start"  BorderColor="Black" CornerRadius="15" WidthRequest="40"  Padding="5">
+                    <Label  Text="SKIP" FontSize="12"  FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="SkipTapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

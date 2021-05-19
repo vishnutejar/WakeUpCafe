@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WakeUpCafe.pages.EcommersMainPage"
+             IconImageSource="hamburger.png"
+              Title="Wake Up Cafe"
+             >
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="Pink">
+            <Grid BackgroundColor="LightBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <CarouselView Grid.Row="0" Grid.RowSpan="2" x:Name="carouselview" HeightRequest="300"> 
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                                <StackLayout>
+                                    <Image  Aspect="AspectFit"  Source="cofffe1.jpg"/>
+
+                                </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <Button Grid.Row="0"  Margin="40"  BackgroundColor="Transparent" BorderColor="White" TextColor="White" BorderWidth="1" Text="Get 20 % every day"/>
+               
+            </Grid>
+            <StackLayout Margin="10"  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="Hot" FontAttributes="Bold" TextColor="Black" FontSize="20" VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                <Frame BackgroundColor="Green" HorizontalOptions="EndAndExpand"  CornerRadius="15" WidthRequest="50" Padding="5">
+                    <Label  Text="See All" FontSize="12" HorizontalTextAlignment="Center"  TextColor="White"/>
+                </Frame>
+            </StackLayout>
+           
+            <Grid  Margin="5" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+              
+                <Frame Grid.Row="1" Margin="10" Grid.Column="0">
+                    <StackLayout>
+                        <Image Source="icon.png" HeightRequest="100" WidthRequest="100"></Image>
+                        <Frame BackgroundColor="Green" HorizontalOptions="Start"  CornerRadius="15" WidthRequest="40" Padding="5">
+                            <Label  Text="NEW" FontSize="12" HorizontalTextAlignment="Center"  TextColor="White"/>
+                        </Frame>
+                        <Label Text="By Tea Shop" FontSize="12" TextColor="Green"/>
+                        <Label Text="Assam Tea" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Grid.Row="1" Margin="10" Grid.Column="1">
+                    <StackLayout>
+                        <Image Source="icon.png" HeightRequest="100" WidthRequest="100"></Image>
+                        <Frame BackgroundColor="Green" HorizontalOptions="Start"  CornerRadius="15" WidthRequest="40" Padding="5">
+                            <Label  Text="NEW" FontSize="12" HorizontalTextAlignment="Center"  TextColor="White"/>
+                        </Frame>
+                        <Label Text="By Tea Shop" FontSize="12" TextColor="Green"/>
+                        <Label Text="Assam Tea" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                    </StackLayout>
+                </Frame>
+
+            </Grid>
+        </StackLayout>
+       
+        
+
+    </ContentPage.Content>
+</ContentPage>

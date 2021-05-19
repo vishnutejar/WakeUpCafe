@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlyoutPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WakeUpCafe.pages.MainMenuPage"
+             NavigationPage.HasNavigationBar="False" 
+             xmlns:local="clr-namespace:WakeUpCafe.pages"
+             x:Name="flyoutpage"
+             Title="Wake Up Cafe"
+             FlyoutLayoutBehavior="Popover"
+             >
+
+
+    <FlyoutPage.Flyout>
+        <ContentPage BackgroundColor="#008b00"  Title="Wake Up Cafe">
+            <StackLayout>
+                <ListView x:Name="listviewMenu" ItemSelected="NavigateSeelctedPage">
+                    <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding IconSource}" />
+                                <Label Grid.Column="1" Text="{Binding Title}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+    <FlyoutPage.Detail>
+        <NavigationPage>
+           <x:Arguments>
+             <local:EcommersMainPage/>
+          </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>
