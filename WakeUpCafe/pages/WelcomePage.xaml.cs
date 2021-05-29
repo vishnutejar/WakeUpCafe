@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,9 +13,25 @@ namespace WakeUpCafe.pages
             InitializeComponent();
         }
 
-        private void GoToHomePage(object sender, EventArgs e)
+          void GoToHomePage(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new MainMenuPage());
+            if (welcome.Text.Equals("Welcome"))
+            {
+                welcome.Text = "Learn";
+                description1.Text = "The Most Modern tendencies";
+                description2.Text = " along with the ancient ones";
+                btnext.Text = "Finish!";
+            }
+            else if (welcome.Text.Equals("Learn"))
+            {
+                welcome.Text = "Prepare";
+                description1.Text = "To experience Tea like never before.";
+                btnext.Text = "Next";
+            }
+            else if(welcome.Text.Equals("Prepare"))
+            {
+                App.Current.MainPage = new NavigationPage(new MainMenuPage());
+            }
 
         }
 

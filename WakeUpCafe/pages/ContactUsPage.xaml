@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WakeUpCafe.pages.ContactUsPage"
+             Title="Contact Us">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Image Source="icon.png" WidthRequest="200" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="icon.png" WidthRequest="40" HeightRequest="40"/>
+                <Label Text="WakeUp Coffee" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                
+            </StackLayout>
+            <Label Text="About Us" FontSize="Medium" TextColor="Gray" FontAttributes="Bold"/>
+            <Label Text="We strongly believe in supplying only hight-grade permium loose tea.Many teas are produced using very poor quality tea leaves,espesially in blended and flavoured teas Since tea quality and purity in our paramount connsisderation,we only select teas that meet our high quality standards" FontSize="Small" TextColor="Gray" />
+
+            <Image 
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        WidthRequest="70"
+        HeightRequest="70"        
+        Source="https://devblogs.microsoft.com/xamarin/wp-content/uploads/sites/44/2019/03/Screen-Shot-2017-01-03-at-3.35.53-PM-150x150.png">
+                <Image.Clip>
+                    <EllipseGeometry
+                Center="35,35"
+                RadiusX="35"
+                RadiusY="35"
+                        />
+                </Image.Clip>
+            </Image>
+          
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

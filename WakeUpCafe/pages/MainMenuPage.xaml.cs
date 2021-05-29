@@ -27,6 +27,7 @@ namespace WakeUpCafe.pages
             listOfMenuItems.Add(new MenuItems { IconSource = "icon.png", Title = "Shop MainPage",Position=0});
             listOfMenuItems.Add(new MenuItems { IconSource = "icon.png", Title = "Location",Position=1});
             listOfMenuItems.Add(new MenuItems { IconSource = "icon.png", Title = "About",Position=2});
+            listOfMenuItems.Add(new MenuItems { IconSource = "icon.png", Title = "LogOut",Position=3});
         }
 
         private void NavigateSeelctedPage(object sender, SelectedItemChangedEventArgs e)
@@ -34,7 +35,19 @@ namespace WakeUpCafe.pages
             var postion = e.SelectedItem as MenuItems;
             DisplayAlert("", postion.Title, "0k");
 
+            switch (postion.Position) {
 
+                case 0:
+                    Navigation.PushAsync(new Page());
+                    break;
+                case 2:
+                    Navigation.PushAsync(new ContactUsPage());
+                    break;
+                case 3:
+                    Navigation.PopToRootAsync();
+                    break;
+
+            }
         }
     }
 }

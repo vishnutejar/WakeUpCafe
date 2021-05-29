@@ -17,8 +17,10 @@ namespace WakeUpCafe.pages
         public EcommersMainPage()
         {
             InitializeComponent();
-            carouselviewdata.Add("");
-            carouselviewdata.Add("");
+            carouselviewdata.Add("cofffe1.jpg");
+            carouselviewdata.Add("cofffe1.jpg");
+            carouselviewdata.Add("cofffe1.jpg");
+            carouselviewdata.Add("cofffe1.jpg");
             carouselview.ItemsSource = carouselviewdata;
         }
     }
