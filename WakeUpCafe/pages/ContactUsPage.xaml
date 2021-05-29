@@ -4,17 +4,17 @@
              x:Class="WakeUpCafe.pages.ContactUsPage"
              Title="Contact Us">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
-            <Image Source="icon.png" WidthRequest="200" HorizontalOptions="FillAndExpand"/>
-            <StackLayout Orientation="Horizontal">
+        <ScrollView>
+                    <StackLayout Orientation="Vertical">
+            <Image Source="icon.png" HeightRequest="200" BackgroundColor="LightBlue" HorizontalOptions="FillAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="10">
                 <Image Source="icon.png" WidthRequest="40" HeightRequest="40"/>
-                <Label Text="WakeUp Coffee" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="WakeUp Coffee" Margin="10" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
                 
             </StackLayout>
-            <Label Text="About Us" FontSize="Medium" TextColor="Gray" FontAttributes="Bold"/>
-            <Label Text="We strongly believe in supplying only hight-grade permium loose tea.Many teas are produced using very poor quality tea leaves,espesially in blended and flavoured teas Since tea quality and purity in our paramount connsisderation,we only select teas that meet our high quality standards" FontSize="Small" TextColor="Gray" />
-
-            <Image 
+            <Label Text="About Us" FontSize="Medium" HorizontalOptions="Center" TextColor="DimGray" FontAttributes="Bold"/>
+                <Label HorizontalTextAlignment="Center" Padding="20" Text="We strongly believe in supplying only hight-grade permium loose tea.Many teas are produced using very poor quality tea leaves,espesially in blended and flavoured teas Since tea quality and purity in our paramount connsisderation,we only select teas that meet our high quality standards" FontSize="Small" TextColor="Gray" />
+                <Image 
         HorizontalOptions="Center"
         VerticalOptions="Center"
         WidthRequest="70"
@@ -28,7 +28,33 @@
                         />
                 </Image.Clip>
             </Image>
-          
-        </StackLayout>
+            <Label Text="Skyler harrisson" HorizontalOptions="Center" FontSize="Medium" TextColor="Gray" FontAttributes="Bold"/>
+                <Label Text="Founder and CTO" HorizontalOptions="Center" FontSize="Medium" TextColor="LightGreen" />
+                <Label  HorizontalTextAlignment="Center" FontSize="Small" Text="When in need of a great design you know who to call:this team is amazing!" Padding="20" TextColor="Gray" />
+                <Image HorizontalOptions="Center"  Source="icon.png" WidthRequest="30" HeightRequest="30"></Image>
+                <StackLayout Padding="10" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                    <StackLayout.Resources>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="Fill" Value="#33222222"/>
+                            <Setter Property="WidthRequest" Value="10"/>
+                            <Setter Property="HeightRequest" Value="10"/>
+                            <Setter Property="VerticalOptions" Value="Center"/>
+                        </Style>
+                        <Style TargetType="Line">
+                            <Setter Property="Stroke" Value="lightgray"/>
+                            <Setter Property="X2" Value="20"/>
+                            <Setter Property="VerticalOptions" Value="Center"/>
+                        </Style>
+                    </StackLayout.Resources>
+
+                    <Ellipse Fill="black" Opacity="30"/>
+                    <Line />
+                    <Ellipse />
+                  
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
